@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Web pembelajaran Bahasa Arab untuk pemula. Belajar huruf hijaiyah, kosakata, latihan, dan progres belajar."
+    >
+
+    <title>ArabKu — Belajar Bahasa Arab untuk Pemula</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+    <header class="navbar">
+        <div class="container navbar-content">
+
+            <a href="#beranda" class="logo">
+                <span class="logo-icon">ع</span>
+                <span>Arab<span class="logo-highlight">Ku</span></span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+                <a href="#kosakata" class="nav-link">Kosakata</a>
+                <a href="#huruf" class="nav-link">Huruf Hijaiyah</a>
+                <a href="#latihan" class="nav-link">Latihan</a>
+            </nav>
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Buka menu"
+                type="button"
+            >
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================================
+             HERO / BERANDA
+        ================================= -->
+        <section class="hero" id="beranda">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-badge">
+                        🌱 Untuk Pemula
+                    </span>
+
+                    <h1>
+                        Belajar Bahasa Arab
+                        <span>Jadi Lebih Mudah</span>
+                    </h1>
+
+                    <p>
+                        Mulai perjalanan belajar Bahasa Arab dari dasar.
+                        Kenali huruf, hafalkan kosakata, dan uji kemampuanmu
+                        melalui latihan interaktif.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#kosakata" class="btn btn-primary">
+                            Mulai Belajar →
+                        </a>
+
+                        <a href="#huruf" class="btn btn-secondary">
+                            Pelajari Huruf
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero-card">
+
+                    <div class="arabic-decoration">ب</div>
+
+                    <p class="hero-arabic">
+                        اَلْعَرَبِيَّةُ
+                    </p>
+
+                    <p class="hero-translation">
+                        Bahasa Arab
+                    </p>
+
+                    <div class="hero-stars">
+                        ★ ★ ★
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================================
+             STATISTIK BELAJAR
+        ================================= -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+
+                <div class="stat-card">
+                    <span class="stat-icon">🔤</span>
+                    <div>
+                        <strong>28</strong>
+                        <span>Huruf Hijaiyah</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">📚</span>
+                    <div>
+                        <strong>100+</strong>
+                        <span>Kosakata</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">✏️</span>
+                    <div>
+                        <strong>50+</strong>
+                        <span>Soal Latihan</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">🏆</span>
+                    <div>
+                        <strong>5</strong>
+                        <span>Level Belajar</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================================
+             KOSAKATA
+        ================================= -->
+        <section class="section vocabulary-section" id="kosakata">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">KOSAKATA DASAR</span>
+
+                    <h2>
+                        Belajar Kata Sehari-hari
+                    </h2>
+
+                    <p>
+                        Kenali beberapa kosakata Bahasa Arab yang sering
+                        digunakan dalam kehidupan sehari-hari.
+                    </p>
+                </div>
+
+
+                <!-- Filter kategori -->
+                <div class="category-filter">
+                    <button
+                        class="filter-btn active"
+                        data-category="semua"
+                        type="button"
+                    >
+                        Semua
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="sapaan"
+                        type="button"
+                    >
+                        Sapaan
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="keluarga"
+                        type="button"
+                    >
+                        Keluarga
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="benda"
+                        type="button"
+                    >
+                        Benda
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="angka"
+                        type="button"
+                    >
+                        Angka
+                    </button>
+                </div>
+
+
+                <!-- Daftar kosakata -->
+                <div class="vocabulary-grid" id="vocabularyGrid">
+
+                    <article
+                        class="vocabulary-card"
+                        data-category="sapaan"
+                    >
+                        <span class="vocabulary-category">
+                            Sapaan
+                        </span>
+
+                        <div class="arabic-word">
+                            مَرْحَبًا
+                        </div>
+
+                        <div class="latin-word">
+                            Marhaban
+                        </div>
+
+                        <div class="meaning">
+                            Halo
+                        </div>
+
+                        <button
+                            class="audio-btn"
+                            data-word="مَرْحَبًا"
+                            aria-label="Dengarkan Marhaban"
+                            type="button"
+                        >
+                            🔊 Dengarkan
+                        </button>
+                    </article>
+
+
+                    <article
+                        class="vocabulary-card"
+                        data-category="sapaan"
+                    >
+                        <span class="vocabulary-category">
+                            Sapaan
+                        </span>
+
+                        <div class="arabic-word">
+                            شُكْرًا
+                        </div>
+
+                        <div class="latin-word">
+                            Syukran
+                        </div>
+
+                        <div class="meaning">
+                            Terima kasih
+                        </div>
+
+                        <button
+                            class="audio-btn"
+                            data-word="شُكْرًا"
+                            aria-label="Dengarkan Syukran"
+                            type="button"
+                        >
+                            🔊 Dengarkan
+                        </button>
+                    </article>
+
+
+                    <article
+                        class="vocabulary-card"
+                        data-category="keluarga"
+                    >
+                        <span class="vocabulary-category">
+                            Keluarga
+                        </span>
+
+                        <div class="arabic-word">
+                            أَبٌ
+                        </div>
+
+                        <div class="latin-word">
+                            Abun
+                        </div>
+
+                        <div class="meaning">
+                            Ayah
+                        </div>
+
+                        <button
+                            class="audio-btn"
+                            data-word="أَبٌ"
+                            aria-label="Dengarkan Abun"
+                            type="button"
+                        >
+                            🔊 Dengarkan
+                        </button>
+                    </article>
+
+
+                    <article
+                        class="vocabulary-card"
+                        data-category="keluarga"
+                    >
+                        <span class="vocabulary-category">
+                            Keluarga
+                        </span>
+
+                        <div class="arabic-word">
+                            أُمٌّ
+                        </div>
+
+                        <div class="latin-word">
+                            Ummun
+                        </div>
+
+                        <div class="meaning">
+                            Ibu
+                        </div>
+
+                        <button
+                            class="audio-btn"
+                            data-word="أُمٌّ"
+                            aria-label="Dengarkan Ummun"
+                            type="button"
+                        >
+                            🔊 Dengarkan
+                        </button>
+                    </article>
+
+
+                    <article
+                        class="vocabulary-card"
+                        data-category="benda"
+                    >
+                        <span class="vocabulary-category">
+                            Benda
+                        </span>
+
+                        <div class="arabic-word">
+                            كِتَابٌ
+                        </div>
+
+                        <div class="latin-word">
+                            Kitaabun
+                        </div>
+
+                        <div class="meaning">
+                            Buku
+                        </div>
+
+                        <button
+                            class="audio-btn"
+                            data-word="كِتَابٌ"
+                            aria-label="Dengarkan Kitaabun"
+                            type="button"
+                        >
+                            🔊 Dengarkan
+                        </button>
+                    </article>
+
+
+                    <article
+                        class="vocabulary-card"
+                        data-category="benda"
+                    >
+                        <span class="vocabulary-category">
+                            Benda
+                        </span>
+
+                        <div class="arabic-word">
+                            قَلَمٌ
+                        </div>
+
+                        <div class="latin-word">
+                            Qalamun
+                        </div>
+
+                        <div class="meaning">
+                            Pena
+                        </div>
+
+                        <button
+                            class="audio-btn"
+                            data-word="قَلَمٌ"
+                            aria-label="Dengarkan Qalamun"
+                            type="button"
+                        >
+                            🔊 Dengarkan
+                        </button>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================================
+             HURUF HIJAIYAH
+        ================================= -->
+        <section class="section letters-section" id="huruf">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">DASAR BAHASA ARAB</span>
+
+                    <h2>
+                        Kenali Huruf Hijaiyah
+                    </h2>
+
+                    <p>
+                        Pelajari bentuk dan pengucapan huruf Arab
+                        satu per satu.
+                    </p>
+                </div>
+
+
+                <div class="letters-grid" id="lettersGrid">
+
+                    <button class="letter-card" data-letter="ا" type="button">
+                        <span class="letter-arabic">ا</span>
+                        <span class="letter-name">Alif</span>
+                        <span class="letter-latin">A</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ب" type="button">
+                        <span class="letter-arabic">ب</span>
+                        <span class="letter-name">Ba</span>
+                        <span class="letter-latin">B</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ت" type="button">
+                        <span class="letter-arabic">ت</span>
+                        <span class="letter-name">Ta</span>
+                        <span class="letter-latin">T</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ث" type="button">
+                        <span class="letter-arabic">ث</span>
+                        <span class="letter-name">Tsa</span>
+                        <span class="letter-latin">Ts</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ج" type="button">
+                        <span class="letter-arabic">ج</span>
+                        <span class="letter-name">Jim</span>
+                        <span class="letter-latin">J</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ح" type="button">
+                        <span class="letter-arabic">ح</span>
+                        <span class="letter-name">Ha</span>
+                        <span class="letter-latin">H</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="خ" type="button">
+                        <span class="letter-arabic">خ</span>
+                        <span class="letter-name">Kha</span>
+                        <span class="letter-latin">Kh</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="د" type="button">
+                        <span class="letter-arabic">د</span>
+                        <span class="letter-name">Dal</span>
+                        <span class="letter-latin">D</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ذ" type="button">
+                        <span class="letter-arabic">ذ</span>
+                        <span class="letter-name">Dzal</span>
+                        <span class="letter-latin">Dz</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ر" type="button">
+                        <span class="letter-arabic">ر</span>
+                        <span class="letter-name">Ra</span>
+                        <span class="letter-latin">R</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="ز" type="button">
+                        <span class="letter-arabic">ز</span>
+                        <span class="letter-name">Zai</span>
+                        <span class="letter-latin">Z</span>
+                    </button>
+
+                    <button class="letter-card" data-letter="س" type="button">
+                        <span class="letter-arabic">س</span>
+                        <span class="letter-name">Sin</span>
+                        <span class="letter-latin">S</span>
+                    </button>
+
+                </div>
+
+
+                <div class="letters-action">
+                    <button
+                        class="btn btn-primary"
+                        id="showAllLettersBtn"
+                        type="button"
+                    >
+                        Lihat Semua Huruf
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================================
+             LATIHAN
+        ================================= -->
+        <section class="section practice-section" id="latihan">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">UJI KEMAMPUANMU</span>
+
+                    <h2>
+                        Latihan Bahasa Arab
+                    </h2>
+
+                    <p>
+                        Jawab pertanyaan berikut dan lihat seberapa jauh
+                        kamu memahami materi.
+                    </p>
+                </div>
+
+
+                <div class="quiz-card">
+
+                    <div class="quiz-header">
+                        <div>
+                            <span class="quiz-label">
+                                LATIHAN
+                            </span>
+
+                            <h3 id="questionNumber">
+                                Pertanyaan 1 dari 5
+                            </h3>
+                        </div>
+
+                        <div class="score-box">
+                            Skor:
+                            <strong id="score">0</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="progress-bar">
+                        <div
+                            class="progress-fill"
+                            id="quizProgress"
+                            style="width: 20%;"
+                        ></div>
+                    </div>
+
+
+                    <div class="question-area">
+
+                        <p class="question">
+                            Apa arti dari kata berikut?
+                        </p>
+
+                        <div
+                            class="question-arabic"
+                            id="questionArabic"
+                        >
+                            كِتَابٌ
+                        </div>
+
+                        <div class="answer-grid" id="answerGrid">
+
+                            <button
+                                class="answer-btn"
+                                data-answer="Buku"
+                                type="button"
+                            >
+                                Buku
+                            </button>
+
+                            <button
+                                class="answer-btn"
+                                data-answer="Pena"
+                                type="button"
+                            >
+                                Pena
+                            </button>
+
+                            <button
+                                class="answer-btn"
+                                data-answer="Ayah"
+                                type="button"
+                            >
+                                Ayah
+                            </button>
+
+                            <button
+                                class="answer-btn"
+                                data-answer="Ibu"
+                                type="button"
+                            >
+                                Ibu
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="quiz-feedback"
+                        id="quizFeedback"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <div class="quiz-footer">
+
+                        <button
+                            class="btn btn-primary"
+                            id="nextQuestionBtn"
+                            type="button"
+                            disabled
+                        >
+                            Pertanyaan Berikutnya →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================================
+             PROGRES BELAJAR
+        ================================= -->
+        <section class="section progress-section">
+            <div class="container">
+
+                <div class="progress-card">
+
+                    <div class="progress-info">
+
+                        <span class="section-label">
+                            PROGRES BELAJARMU
+                        </span>
+
+                        <h2>
+                            Terus Semangat Belajar! 🚀
+                        </h2>
+
+                        <p>
+                            Konsistensi adalah kunci. Selesaikan materi
+                            sedikit demi sedikit setiap hari.
+                        </p>
+
+                    </div>
+
+
+                    <div class="progress-stat">
+
+                        <div class="progress-circle">
+                            <span id="learningProgress">
+                                25%
+                            </span>
+                        </div>
+
+                        <div>
+                            <strong>Progress</strong>
+                            <span>Materi selesai</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#beranda" class="logo">
+                    <span class="logo-icon">ع</span>
+                    <span>Arab<span class="logo-highlight">Ku</span></span>
+                </a>
+
+                <p>
+                    Teman belajar Bahasa Arab untuk pemula.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <h4>Belajar</h4>
+
+                    <a href="#kosakata">
+                        Kosakata
+                    </a>
+
+                    <a href="#huruf">
+                        Huruf Hijaiyah
+                    </a>
+
+                    <a href="#latihan">
+                        Latihan
+                    </a>
+                </div>
+
+
+                <div>
+                    <h4>ArabKu</h4>
+
+                    <a href="#beranda">
+                        Tentang
+                    </a>
+
+                    <a href="#progress">
+                        Progres
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>
+                    © <span id="currentYear"></span> ArabKu.
+                    Belajar Bahasa Arab dengan menyenangkan.
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- ================================
+         MODAL HURUF
+    ================================= -->
+    <div
+        class="modal"
+        id="letterModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalLetter"
+        >
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Tutup"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-letter"
+                id="modalLetter"
+            >
+                ا
+            </div>
+
+            <h3 id="modalLetterName">
+                Alif
+            </h3>
+
+            <p id="modalLetterDescription">
+                Huruf pertama dalam alfabet Arab.
+            </p>
+
+            <button
+                class="audio-btn modal-audio"
+                id="modalAudioBtn"
+                type="button"
+            >
+                🔊 Dengarkan Pengucapan
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+    <script src="script.js"></script>
+
+</body>
+</html>
